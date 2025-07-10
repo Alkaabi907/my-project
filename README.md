@@ -1,7 +1,7 @@
  #                                                HK memory 
 
 
-**entertainment game the funny browser game **
+**entertainment game the funny browser game**
 ## Description : 
 **Hk memory game testing user memory by trying to search for pairs of emoji  if both cads have same emoji and so on until he find all 16 cards total**
 
