@@ -4,7 +4,7 @@ align-items:center ;
 height: 100%;
 display: flex;
 justify-content: center;
-background-color:aquamarine;
+background-color: black;
 flex-direction: column;
 
 }
@@ -14,35 +14,31 @@ flex-direction: column;
 #cube{
 
     /* align-items: center; */
-    display: flex;
+    display: grid;
     position: relative;
     justify-content: center ;
     gap: 35px;
     flex-direction: column;
     background-color: aliceblue;
     padding: 50px 70px;
-    height: 500px;
+    height: 450px;
     width: 500px;
     /* margin: -400px; */
     margin: -5px;
-    
+    box-shadow:0 4px 8px rgba(0,0,0,0.1);
+    margin-top: -20px;
+    background-color: black;
 }
 
 h1{
+    margin-top: 120px;
     font-size: 30px;
+    color: beige;
+
 }
 
 
 .playAgain{
-    /* border: none;
-    color: blue;
-    background-color: white;
-    padding: 15px 20px ;
-    text-transform: uppercase;
-    font-size: large;
-    margin:30px;
-    font-weight: 700;
-    letter-spacing: 0.1em; */
 
     border:none;
     border-radius: 25px;
@@ -51,13 +47,21 @@ h1{
     max-width: 200px;
     /* align-self: center; */
     font-size: large;
-    background-color: black;
-    color: white;
+    background-color: beige;
+    color: black;
     margin-bottom: -450px;
-    margin-left: 150px;
+    margin-top: -5px;
+    
+   
+}
+#button-container{
+
+display: flex;
+justify-content: center;
+    
 }
 
-.playAgain:fous{
+.playAgain:focus{
     color: blue;
     background-color: lightblue;
 }
@@ -66,7 +70,66 @@ h1{
 
 width: 400px;
 height: 400px;
+display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.item{
+    position: relative;
+    width: 90px;
+    height: 90px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+font-size: 2em;
+transition: 0.25s;
+        transform: rotateY(180deg);
 
 
+
+}
+.item.boxOpen{
+
+        transform: rotateY(0deg);
+
+}
+.item::after{
+
+    content: '';
+    position: absolute;
+    inset:0;
+    background-color: rgb(13, 101, 184);
+    transition: 0.25s;
+    transform:rotate(0deg);
+    opacity: 0.86;
+    backface-visibility: hidden;
+
+}
+
+.boxOpen::after{
+
+
+    transform: rotateY(180deg);
+}
+
+.boxOpen::after , .boxMatch::after{
+
+
+    transform: rotateY(180deg) ;
+}
+
+.win{
+    position: relative;
+    top:-300px;
+    width: 200px;
+    height: 150px ;
+    background-color: rgb(13, 101, 184);
+    color: white;
+    border-radius: 15px;
+    text-align: center;
+    align-content: center;
+    font-size: xx-large;
+    margin-top: -75px;
 
 }
