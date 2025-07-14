@@ -14,7 +14,7 @@ flex-direction: column;
 }
 
 
-/* 
+
 #cube{
 
     
@@ -32,35 +32,26 @@ flex-direction: column;
     box-shadow:0 4px 8px rgba(0,0,0,0.1);
     margin-top: -20px;
     background-color: black;
-} */
+}
 
 h1{
-    margin-top: 120px;
-    font-size: 30px;
-    color: beige;
-}
-h1:active{
-    content:'HK Memory';
-    color: black;
-}
-
-
-.playAgain{
-
+  
+    font-size: 50px;
+    /* color:white;
     border:none;
     border-radius: 25px;
     width: 300px;
-    height: 50px;
-    max-width: 200px;
-   
-    font-size: large;
-    background-color: beige;
-    color: black;
-    margin-bottom: -450px;
-    margin-top: -5px;
-    
+    height:40px;
+    max-width: 400px;
+   text-align: center;
+    font-size: xx-large;
+    background-color:rgb(13, 101, 184);
+     */
    
 }
+
+
+
 #button-container{
 
 display: flex;
@@ -142,27 +133,56 @@ transition: 0.25s;
 }
 
 
+.playAgain{
+
+    border:none;
+    border-radius: 25px;
+    width: 300px;
+    height: 50px;
+    max-width: 200px;
+   
+    font-size: large;
+    background-color: beige;
+    color: black;
+    margin-bottom: -450px;
+    margin-top: -5px;
+   
+}
+
 .dark {
-  padding: 10px 20px;
-  font-size: 16px;
-  border-radius: 8px;
+  position: fixed;        
+  top: 20px;               
+  right: 20px;             
+  padding: 10px 15px;
+  font-size: 18px;
+  border-radius: 50px;     
   border: none;
   background-color: black;
   color: white;
   cursor: pointer;
-  margin-top: 20px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3); 
+  z-index: 1000;           
+  transition: 0.3s;
 }
 
 
-.dark-mode  {
-  background-color:black;
+.dark-mode {
+  background-color: #121212;
   color: white;
-  margin: 10px;
-  padding: 40px;
-
 }
 
-.dark-mode .dark  {
+.dark-mode .dark {
   background-color: white;
   color: black;
 }
+
+
+.dark-mode .playAgain {
+  background-color: white;
+  color: black;
+}
+
+.dark-mode #cube {
+  background-color: #1e1e1e;
+}
+

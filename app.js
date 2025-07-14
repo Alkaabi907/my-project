@@ -48,19 +48,21 @@ for (let i=0; i<emojy.length;i++){
     document.querySelector('#memoryGame').appendChild(box);
 }
 
+
 let dark1 = false;
 
 document.querySelector(".dark").onclick = function () {
   if (!dark1) {
     document.body.classList.add("dark-mode");
-    this.textContent = "Light Mode";
+    this.textContent = "☀️"; 
     dark1 = true;
   } else {
     document.body.classList.remove("dark-mode");
-    this.textContent = "Dark Mode";
+    this.textContent = "🌙"; 
     dark1 = false;
   }
 };
+
 
 
 
