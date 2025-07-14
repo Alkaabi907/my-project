@@ -3,6 +3,7 @@
 
             let shuf_emojy = emojy.sort(() => (Math.random() > .5)? 2 : -1 );
             let preventClick = false;
+            let winSound = new Audio("./win.mp3"); 
 
 for (let i=0; i<emojy.length;i++){
     let box = document.createElement('div');
@@ -32,7 +33,8 @@ for (let i=0; i<emojy.length;i++){
                         win.className = "win";
                         win.innerHTML="You Win 🏆 ";
                          document.body.appendChild(win);
-
+                        winSound .volume=0.5; 
+                        winSound .play();
                     }
                 } 
                 
