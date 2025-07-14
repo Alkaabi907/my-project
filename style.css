@@ -145,7 +145,7 @@ transition: 0.25s;
     background-color: black;
     color:white;
     margin-bottom: -450px;
-    margin-top: 20px;
+    margin-top: 90px;
    
 }
 
@@ -177,12 +177,34 @@ transition: 0.25s;
 }
 
 
-.dark-mode .playAgain {
+.dark-mode .playAgain,
+.dark-mode .level1,
+.dark-mode .level2,
+.dark-mode .level3 {
   background-color: white;
   color: black;
 }
+
 
 .dark-mode #cube {
   background-color: #1e1e1e;
 }
 
+
+.level1 , .level2 , .level3{
+
+     border:none;
+    border-radius: 25px;
+    width: 100px;
+    height: 50px;
+    max-width: 200px;
+   
+    font-size: large;
+    background-color: black;
+    color:white;
+    margin-bottom: -450px;
+    margin-top:15px; 
+  
+
+
+}
