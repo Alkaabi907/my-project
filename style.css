@@ -180,7 +180,9 @@ transition: 0.25s;
 .dark-mode .playAgain,
 .dark-mode .level1,
 .dark-mode .level2,
-.dark-mode .level3 {
+.dark-mode .level3 
+
+{
   background-color: white;
   color: black;
 }
@@ -240,4 +242,15 @@ transition: 0.25s;
 }
 .lose {
   color: red;
+  position: relative;
+  top: -400px;
+}
+
+
+a{
+
+  text-decoration: none;
+  color: white;
+
+
 }
