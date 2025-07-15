@@ -208,3 +208,9 @@ transition: 0.25s;
 
 
 }
+
+.timer {
+  position: relative;
+  left: -300px;
+  bottom:-40px;
+}

@@ -6,7 +6,7 @@
                 let winSound = new Audio("./win.mp3"); 
                 let playAgain = document.querySelector(".playAgain");
                 let memoryGame = document.querySelector("#memoryGame");
-
+                let timer = document.querySelector(".timer")
     function render (){
         memoryGame.innerHTML = "";
         preventClick = false;
@@ -89,5 +89,12 @@
 
 
     render();
+
+    function timer () {
+
+
+
+
+    }
 
     
