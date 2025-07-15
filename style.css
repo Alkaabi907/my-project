@@ -1,226 +1,192 @@
-body{
-
-align-items:center ;
-height: 100%;
-display: flex;
-justify-content: center;
-background-color: black;
-flex-direction: column;
- background-color: white;
+/* General body styles */
+body {
+  align-items: center;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  background-color: white;
   color: black;
   font-family: Arial, sans-serif;
   transition: 0.3s;
-
 }
 
-
-
-#cube{
-
-    
-    display: grid;
-    position: relative;
-    justify-content: center ;
-    gap: 35px;
-    flex-direction: column;
-    background-color: aliceblue;
-    padding: 50px 70px;
-    height: 450px;
-    width: 500px;
-    
-    margin: -5px;
-    box-shadow:0 4px 8px rgba(0,0,0,0.1);
-    margin-top: -20px;
-    background-color: black;
+/* Game container box */
+#cube {
+  display: grid;
+  position: relative;
+  justify-content: center;
+  gap: 35px;
+  flex-direction: column;
+  background-color: black;
+  padding: 50px 70px;
+  height: 450px;
+  width: 500px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  margin: -5px;
+  margin-top: -20px;
 }
 
-h1{
-  
-    font-size: 50px;
-    /* color:white;
-    border:none;
-    border-radius: 25px;
-    width: 300px;
-    height:40px;
-    max-width: 400px;
-   text-align: center;
-    font-size: xx-large;
-    background-color:rgb(13, 101, 184);
-     */
-   
+/* Main title style */
+h1 {
+  font-size: 50px;
 }
 
-
-
-#button-container{
-
-display: flex;
-justify-content: center;
-    
+/* Button container (e.g., Play Again) */
+#button-container {
+  display: flex;
+  justify-content: center;
 }
 
-.playAgain:focus{
-    color: blue;
-    background-color: lightblue;
+/* Highlight playAgain when focused */
+.playAgain:focus {
+  color: blue;
+  background-color: lightblue;
 }
 
-#memoryGame{
-
-width: 400px;
-height: 400px;
-display: flex;
+/* Memory game grid */
+#memoryGame {
+  width: 400px;
+  height: 400px;
+  display: flex;
   flex-wrap: wrap;
   gap: 10px;
 }
 
-.item{
-    position: relative;
-    width: 90px;
-    height: 90px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-font-size: 2em;
-transition: 0.25s;
-        transform: rotateY(180deg);
-
-
-
-}
-.item.boxOpen{
-
-        transform: rotateY(0deg);
-
-}
-.item::after{
-
-    content: '';
-    position: absolute;
-    inset:0;
-    background-color: rgb(13, 101, 184);
-    transition: 0.25s;
-    transform:rotate(0deg);
-    opacity: 0.86;
-    backface-visibility: hidden;
-
+/* Each card/item style */
+.item {
+  position: relative;
+  width: 90px;
+  height: 90px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2em;
+  transition: 0.25s;
+  transform: rotateY(180deg);
 }
 
-.boxOpen::after{
-
-
-    transform: rotateY(180deg);
+/* Open card face */
+.item.boxOpen {
+  transform: rotateY(0deg);
 }
 
-.boxOpen::after , .boxMatch::after{
-
-
-    transform: rotateY(180deg) ;
+/* Back side of the card */
+.item::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-color: rgb(13, 101, 184);
+  transition: 0.25s;
+  transform: rotate(0deg);
+  opacity: 0.86;
+  backface-visibility: hidden;
 }
 
-.win{
-    position: relative;
-    top:-300px;
-    width: 200px;
-    height: 150px ;
-    background-color: rgb(13, 101, 184);
-    color: white;
-    border-radius: 15px;
-    text-align: center;
-    align-content: center;
-    font-size: xx-large;
-    margin-top: 20px;
-
+/* Flip effect when opened or matched */
+.boxOpen::after,
+.boxMatch::after {
+  transform: rotateY(180deg);
 }
 
-
-.playAgain{
-
-    border:none;
-    border-radius: 25px;
-    width: 300px;
-    height: 50px;
-    max-width: 200px;
-   
-    font-size: large;
-    background-color: black;
-    color:white;
-    margin-bottom: -450px;
-    margin-top: 90px;
-   
+/* Win message style */
+.win {
+  position: relative;
+  top: -300px;
+  width: 200px;
+  height: 150px;
+  background-color: rgb(13, 101, 184);
+  color: white;
+  border-radius: 15px;
+  text-align: center;
+  align-content: center;
+  font-size: xx-large;
+  margin-top: 20px;
 }
 
+/* Play Again button */
+.playAgain {
+  border: none;
+  border-radius: 25px;
+  width: 300px;
+  height: 50px;
+  max-width: 200px;
+  font-size: large;
+  background-color: black;
+  color: white;
+  margin-bottom: -450px;
+  margin-top: 90px;
+}
+
+/* Dark mode toggle button */
 .dark {
-  position: fixed;        
-  top: 20px;               
-  right: 20px;             
+  position: fixed;
+  top: 20px;
+  right: 20px;
   padding: 10px 15px;
   font-size: 18px;
-  border-radius: 50px;     
+  border-radius: 50px;
   border: none;
   background-color: black;
   color: white;
   cursor: pointer;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.3); 
-  z-index: 1000;           
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  z-index: 1000;
   transition: 0.3s;
 }
 
-
+/* Dark mode background and text color */
 .dark-mode {
   background-color: #121212;
   color: white;
 }
 
+/* Dark mode toggle button color */
 .dark-mode .dark {
   background-color: white;
   color: black;
 }
 
-
+/* Change button colors in dark mode */
 .dark-mode .playAgain,
 .dark-mode .level1,
 .dark-mode .level2,
-.dark-mode .level3 ,
-
-.dark-mode a
-{
+.dark-mode .level3,
+.dark-mode a {
   background-color: white;
   color: black;
 }
 
-
+/* Dark mode for game container */
 .dark-mode #cube {
   background-color: #1e1e1e;
 }
 
-
-.level1 , .level2 , .level3{
-
-     border:none;
-    border-radius: 25px;
-    width: 100px;
-    height: 50px;
-    max-width: 200px;
-   
-    font-size: large;
-    background-color: black;
-    color:white;
-    margin-bottom: -450px;
-    margin-top:15px; 
-  
-
-
+/* Level selection buttons */
+.level1, .level2, .level3 {
+  border: none;
+  border-radius: 25px;
+  width: 100px;
+  height: 50px;
+  max-width: 200px;
+  font-size: large;
+  background-color: black;
+  color: white;
+  margin-bottom: -450px;
+  margin-top: 15px;
 }
 
+/* Timer position */
 .timer {
   position: relative;
   left: -300px;
-  bottom:-40px;
+  bottom: -40px;
+  font-size: 20px;
+  margin: 10px;
+  font-weight: bold;
 }
 
-
-
-
+/* Difficulty buttons spacing */
 .difficulty-buttons button {
   margin: 5px;
   padding: 10px;
@@ -228,31 +194,22 @@ transition: 0.25s;
   cursor: pointer;
 }
 
-.timer {
-  font-size: 20px;
-  margin: 10px;
-  font-weight: bold;
-}
-
+/* Win and lose message styling */
 .win, .lose {
   font-size: 30px;
   font-weight: bold;
   margin-top: 20px;
-  color: green;
   text-align: center;
 }
+
 .lose {
   color: red;
   position: relative;
   top: -300px;
-  
 }
 
-
-a{
-
+/* Remove underline from links and keep color white */
+a {
   text-decoration: none;
   color: white;
-
-
 }
