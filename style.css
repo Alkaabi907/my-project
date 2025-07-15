@@ -214,3 +214,30 @@ transition: 0.25s;
   left: -300px;
   bottom:-40px;
 }
+
+
+
+
+.difficulty-buttons button {
+  margin: 5px;
+  padding: 10px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.timer {
+  font-size: 20px;
+  margin: 10px;
+  font-weight: bold;
+}
+
+.win, .lose {
+  font-size: 30px;
+  font-weight: bold;
+  margin-top: 20px;
+  color: green;
+  text-align: center;
+}
+.lose {
+  color: red;
+}

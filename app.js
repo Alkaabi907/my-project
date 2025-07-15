@@ -6,7 +6,12 @@
                 let winSound = new Audio("./win.mp3"); 
                 let playAgain = document.querySelector(".playAgain");
                 let memoryGame = document.querySelector("#memoryGame");
-                let timer = document.querySelector(".timer")
+              let timerElement = document.querySelector(".timer");
+                let isRun = true;
+                let rem =120;
+                // let rem =60;
+                // let rem =30;
+
     function render (){
         memoryGame.innerHTML = "";
         preventClick = false;
@@ -84,17 +89,28 @@
 
     playAgain.addEventListener('click',()=>{
             document.querySelector(".win")?.remove();
+            rem = 10;
+            isRun = true;
             render();
     })
 
 
     render();
 
-    function timer () {
 
-
-
-
+function startTimer() {
+    if (isRun === true) {
+        if (rem >= 0) {
+            let min = Math.floor(rem / 60);
+            let sec = rem % 60;
+            let showSec = sec < 10 ? "0" + sec : sec;
+            timerElement.innerHTML = `${min}:${showSec}`;
+        } else {
+            isRun = false;
+            timerElement.innerHTML = "⏰ Time's Up!";
+        }
+        rem--;
     }
+}
 
-    
+setInterval(startTimer,1000);
