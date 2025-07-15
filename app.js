@@ -9,6 +9,10 @@ let timerElement = document.querySelector(".timer");
 
 let selectedTime = 120; // Default time (2 minutes)
 
+
+
+
+
 // Set time based on the current level/page name
 const pageName = location.pathname.split("/").pop();
 if (pageName === "level1.html") selectedTime = 120;  // Easy
@@ -18,6 +22,9 @@ else if (pageName === "level3.html") selectedTime = 30;  // Hard
 let rem = selectedTime;
 let isRun = false;
 let timerInterval;
+
+
+
 
 // Main function to build the game board
 function render() {
@@ -73,6 +80,8 @@ function render() {
 
         memoryGame.appendChild(box);
     }
+
+
 
     // Start timer
     isRun = true;

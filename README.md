@@ -5,7 +5,7 @@
 ## Description : 
 **Hk memory game testing user memory by trying to search for pairs of emoji  if both cads have same emoji and so on until he find all 16 cards total**
 
-**If the user clicks at any cards the will give him one second delay so user could recognize which emojis does shows so he could find same emoji as possible** 
+**If the user clicks at any cards the will give him one second delay so user could recognize which emojis does shows so he could find same emoji as possible i have add more features likes added timer and 3 buttons that represent 3 levels for more challanges to compelete the game** 
 
 #  Memory Card Game
 
@@ -27,7 +27,7 @@
 
 
 
-
+![alt text](image.png)
 
 
 
